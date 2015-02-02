@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="userAPP" >
+
+<head>
+  <meta charset="utf-8">
+  <title>ASA Request with Angular Binding</title>
+  <script src="http://code.angularjs.org/1.1.4/angular.js"></script>
+  <script src="https://rawgit.com/gausian-developers/asa-client-js/master/asa-client.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="ListCtrl">
+  
+  <table ng-repeat="customer in customers_json.customers">
+  <tr>
+      <td>
+          <h3>{{ customer.customer_id }}</h3>
+          <p>{{ customer.company_name }}</p>
+      </td>
+  </tr>
+  </table>
+
+</body>
+</html>
