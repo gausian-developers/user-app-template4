@@ -1,22 +1,23 @@
 var app = angular.module('userAPP', []);
 
 app.controller('ListCtrl', function($scope) {
-  var json = {
-    "customers":
-        [
-                {
-                   "customer_id":"Example_customer_id_1",
-                   "company_name":"AT"
-                },
 
-                {
-                   "customer_id":"Example_customer_id_2",
-                   "company_name":"GA"
-                }
-        ]
-  };
+  var customer_array = [];
 
-  $scope.customers_json = json;
-  
+  ASA.init('CustomerDataReadWrite', '0000000x0');
+  ASA.request('GET:;@CustomerDataReadWrite', function (data, error) {
+    if (error) {
+      console.error('Opps! We have a glitch with ASA server connection' + error);
+    }
+    if (data.response_code === 1) { // success
+      customer_array = JSON.parse(data.response);
+    } else {
+      console.error('ASA Error[' + data.response_code + ']:' + data.response);
+    }
+  });
+
+  $scope.customers = customer_array;
   
 });
+
+
