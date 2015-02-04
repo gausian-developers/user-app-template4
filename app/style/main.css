@@ -26,14 +26,14 @@
 }
 .logo{
 	font-family: arial;
-	font-size: 22px;
+	font-size: 23px;
 	line-height: 30px;
 	position: relative;
 	top: 15px;
 	left: 0px;
 	width: 250;
 	text-align: center;
-	color: #FFBB28;
+	color: rgb(51, 204, 255);
 	text-shadow: 2px 2px 12px black;
 	font-weight: bold;
 }
@@ -57,16 +57,16 @@
 }
 .search_input {
 position: absolute;
-	top: 61px;
+	top: 64px;
 	left: 18px;
 	margin-top: 0px;
 	margin-left: -1px;
-	background-color: rgb(80, 80, 80);
+	background-color: rgb(60, 60, 60);
 	height: 31px;
 	border-radius: 25px;
 	font-family: arial;
 	font-size: 16px;
-	line-height: 33px;
+	line-height: 32px;
 	color: white;
 	padding-left: 13px;
 	z-index: 100;
@@ -135,7 +135,7 @@ position: absolute;
 	top: 51px;
 	left: 92px;
 	font-family: arial;
-	color: rgb(255, 157, 0);
+	color: rgb(51, 204, 255);
 	font-size: 14px;
 }
 .dialog_container {
