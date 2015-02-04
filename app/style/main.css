@@ -302,6 +302,9 @@ position: absolute;
 .left_dialog_container:hover {
 	box-shadow: 0 0 12px rgb(0, 176, 240);
 }
+.right_dialog_container:hover {
+	box-shadow: 0 0 12px rgb(0, 0, 0);
+}
 .right_expend_button {
 	position: absolute;
 	float: right;
